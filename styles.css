@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: relative;
+    background-color: white; /* White background */
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Half of the navbar */
+    height: 100%;
+    background-color: red; /* Red color for the left half */
+    border-bottom-right-radius: 30px; /* Curved end on the right side of the red half */
+    border-top-right-radius: 30px;
+    z-index: 1;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    margin-left: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #333; /* Black color for links */
+    text-decoration: none;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.navbar .auth-buttons {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin-right: 20px;
+}
+
+.navbar .auth-buttons a {
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .auth-buttons a:first-child {
+    color: #333; /* Black color for the Login button */
+    border: 1px solid #333; /* Black border */
+}
+
+.navbar .auth-buttons a:first-child:hover {
+    background-color: #f0f0f0; /* Light grey on hover for Login */
+}
+
+.navbar .auth-buttons a:last-child {
+    color: #fff; /* White color for the Sign Up text */
+    background-color: red; /* Red background for Sign Up */
+    border: 1px solid red; /* Red border for Sign Up */
+}
+
+.navbar .auth-buttons a:last-child:hover {
+    background-color: #cc0000; /* Darker red on hover for Sign Up */
+}
+
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #555;
+}
